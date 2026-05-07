@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shine Asia Estate
 
-## Getting Started
+A small, considered portfolio of villas, apartments, and hotels across
+Koh Samui, Paris, and the French Riviera. Curated since 2013.
 
-First, run the development server:
+> The Thailand we keep for ourselves.
+
+## Stack
+
+- Next.js 16 (App Router) + TypeScript
+- Tailwind CSS v4
+- Framer Motion (animations)
+- next/font/google (Cormorant Garamond + DM Sans)
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Structure
 
-## Learn More
+- `src/app/` — pages (`/`, `/properties`, `/property/[slug]`, `/sell-your-property`, `/about`, `/contact`, `/blog`, `/blog/[slug]`)
+- `src/components/sections/` — reusable luxury components (Nav, Hero, PropertyCard, Editorial, Footer…)
+- `src/lib/` — utilities (currency conversion, cn helper)
+- `src/styles/tokens.css` — design system tokens (palette, typography, spacing, motion)
+- `data/` — properties, blog articles, team profiles, sell-page content
+- `BRIEF.md` — visual + editorial brief (source of truth)
 
-To learn more about Next.js, take a look at the following resources:
+## Markets
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Koh Samui** (Thailand) — primary, 12 years, 671+ properties placed
+- **Paris** (France) — Haussmannian apartments, hôtels particuliers, hotels
+- **Cannes** (French Riviera) — La Croisette villas, Belle Époque mansions, hotels

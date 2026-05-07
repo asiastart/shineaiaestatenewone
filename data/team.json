@@ -1,0 +1,37 @@
+[
+  {
+    "id": "oussama-zakaria",
+    "name": "Mr. Oussama Zakaria",
+    "role": "CEO & Founder",
+    "bio": "Founder of Shine Asia Estate. Twelve years curating exceptional properties across Koh Samui and the Thai islands.",
+    "photo": "/images/team/oussama.jpg",
+    "phone": "+66 65 831 4819",
+    "whatsapp": "+66658314819",
+    "email": "zakaria@shineasiaestate.com",
+    "languages": ["English", "French", "Arabic"],
+    "specialty": "Luxury Villas, Investment Properties"
+  },
+  {
+    "id": "pinki",
+    "name": "Pinki",
+    "role": "Senior Agent",
+    "bio": "Specializes in family villas and beachfront properties on the north coast of Koh Samui.",
+    "photo": "/images/team/pinki.jpg",
+    "whatsapp": "+66954295090",
+    "email": "shineasiaestate@gmail.com",
+    "languages": ["English", "Thai"],
+    "specialty": "Beachfront Villas, Family Homes"
+  },
+  {
+    "id": "enzo-day",
+    "name": "Enzo Day",
+    "role": "Agent — Bali Office",
+    "bio": "Bridges the Shine Asia Estate portfolio between Thailand and Indonesia. Based in Bali.",
+    "photo": "/images/team/enzo.jpg",
+    "whatsapp": "+33637990447",
+    "email": "enzoday1@gmail.com",
+    "languages": ["English", "French", "Indonesian"],
+    "specialty": "Cross-island Investments, Bali Office",
+    "agency": "Shine Bali Estate"
+  }
+]

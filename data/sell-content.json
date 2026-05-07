@@ -1,0 +1,152 @@
+{
+  "hero": {
+    "eyebrow": "Sell with Shine Asia Estate",
+    "headline": "The Thailand we keep for ourselves — placed quietly into the next set of careful hands.",
+    "subhead": "We do not list everything. We place what we choose, properly. To the right buyer, at the right price, in the right way.",
+    "cta_primary": "Begin a private valuation",
+    "cta_secondary": "Speak to Mr. Zakaria"
+  },
+  "stats": [
+    { "value": 671, "suffix": "+", "label": "Properties placed" },
+    { "value": 12, "suffix": "", "label": "Years on the island" },
+    { "value": 4, "suffix": "", "label": "Languages we sell in" },
+    { "value": 47, "suffix": "%", "label": "Sold within 90 days" }
+  ],
+  "promise_intro": "What we do, and what we do not.",
+  "promise_body": "We are a small house. We accept a limited number of new listings each quarter — only properties we have walked, only at prices we can defend. In return, you get an agent who is on your side from valuation to keys.",
+  "tiers": [
+    {
+      "name": "Considered",
+      "price_label": "Standard listing",
+      "intro": "For owners who want a quiet, professional sale on the open market.",
+      "features": [
+        "Full legal & tax framework review (Land Office, Chanote verification)",
+        "Professional photography (day shoot, edited)",
+        "Listed on shineasiaestate.com + 8 partner platforms",
+        "Multi-language listing (EN, FR, TH, AR)",
+        "Inquiry filtering — only qualified buyers reach you",
+        "Translated paperwork at signing",
+        "Bilingual representation at Land Office"
+      ],
+      "commission": "Standard market rate, no upfront fees"
+    },
+    {
+      "name": "Xclusive Collection",
+      "price_label": "Sole-agent representation",
+      "featured": true,
+      "intro": "For owners ready to entrust the entire process — and properties worthy of our private buyer book.",
+      "features": [
+        "Everything in Considered, plus:",
+        "Day + golden-hour photography (separate sessions)",
+        "Cinematic 4K drone film (90-second narrative cut)",
+        "360° virtual tour, embeddable",
+        "Interactive floor plans",
+        "Private buyer-book preview (8 weeks before public listing)",
+        "Targeted campaign across 300+ international platforms",
+        "Direct introductions to our broker network in Singapore, Hong Kong, Dubai, Paris",
+        "Personal-shopper visits arranged",
+        "Press placement (lifestyle outlets) when warranted"
+      ],
+      "commission": "Performance-aligned, discussed privately"
+    }
+  ],
+  "process": [
+    {
+      "step": "01",
+      "title": "First conversation",
+      "body": "We meet you, ideally at the property. We listen. We do not pitch.",
+      "duration": "Day 1"
+    },
+    {
+      "step": "02",
+      "title": "Valuation, properly",
+      "body": "Based on three independent comparables, current Land Office data, and what we know off-market. No inflated estimates to win the listing.",
+      "duration": "Days 2-7"
+    },
+    {
+      "step": "03",
+      "title": "Quiet preparation",
+      "body": "Photography, videography, paperwork, title verification. The property is fully ready before the first buyer sees a single image.",
+      "duration": "Days 8-21"
+    },
+    {
+      "step": "04",
+      "title": "Private preview",
+      "body": "For Xclusive Collection: eight-week head-start to our private buyer book before any public listing.",
+      "duration": "Days 22-78"
+    },
+    {
+      "step": "05",
+      "title": "Public placement",
+      "body": "Multilingual listing across our owned channels and 300+ partner platforms. Inquiries filtered through our team.",
+      "duration": "Day 79+"
+    },
+    {
+      "step": "06",
+      "title": "Negotiation & close",
+      "body": "We represent you at the table and at the Land Office. Bilingual paperwork, escrow recommended, currency-agnostic transfer.",
+      "duration": "On offer accepted"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Sold our Bophut villa in 67 days, at our asking price, to a Singaporean family Oussama had already brought to view it. We never saw a public listing.",
+      "author": "C. Marchand",
+      "role": "Owner, Bophut hills (sold 2024)"
+    },
+    {
+      "quote": "He told us our price was too high. We listened. The villa sold in three months at his number, not ours. He was right.",
+      "author": "J. & M. Henriksen",
+      "role": "Owners, Lipa Noi (sold 2023)"
+    },
+    {
+      "quote": "What we paid Shine in commission, we earned back five times over in price negotiation. He knew exactly what the buyer would pay.",
+      "author": "A. Volkov",
+      "role": "Investor portfolio (3 properties placed)"
+    }
+  ],
+  "faq": [
+    {
+      "q": "How do you decide which properties you take on?",
+      "a": "We accept around 40-50 new listings each quarter. We turn down properties we cannot honestly defend at the asking price, properties with title issues we cannot resolve, and properties that do not fit our buyer book."
+    },
+    {
+      "q": "Do you charge upfront fees?",
+      "a": "No. Photography, marketing, drone work, virtual tours — all included in our commission. You pay nothing until the property sells."
+    },
+    {
+      "q": "Can foreigners legally sell property in Thailand?",
+      "a": "Yes. Foreign-owned condominiums (within the 49% quota) and leasehold structures sell with full legal clarity. For land held through Thai company structures, we work with our partner law firms in Bangkok and Surat Thani to ensure clean transfer."
+    },
+    {
+      "q": "What is your typical commission?",
+      "a": "Standard market rate for our Considered tier, performance-aligned for Xclusive Collection. We discuss this privately, with full transparency, in our first meeting."
+    },
+    {
+      "q": "How long until my property sells?",
+      "a": "For Xclusive Collection in Koh Samui: 47% sell within 90 days, 78% within 6 months. For Considered: typical 4-9 months. Off-island properties take longer. Properties priced above market take longer regardless of tier."
+    },
+    {
+      "q": "Do you handle the legal and Land Office paperwork?",
+      "a": "Yes. Bilingual representation at the Land Office, partner law firms for complex structures, escrow recommended for all international transactions. We do not let you sign anything you do not fully understand."
+    },
+    {
+      "q": "What if I receive a private offer outside your network?",
+      "a": "We honor exclusivity for the contract period (Considered: non-exclusive; Xclusive: 6 months). For private offers received before signing with us, we are happy to advise without taking the listing."
+    },
+    {
+      "q": "Where are your buyers from?",
+      "a": "About 35% Europe (mostly UK, France, Germany, Switzerland), 25% Singapore & Hong Kong, 15% Russia/CIS, 12% Middle East, 8% Australia, 5% domestic Thai. Increasing demand from Indian and Vietnamese buyers in 2025-26."
+    }
+  ],
+  "guarantee": {
+    "title": "Our commitment",
+    "lines": [
+      "We will tell you what your property is worth — not what you want to hear.",
+      "We will not list a property we cannot honestly defend.",
+      "We will not pressure you to drop your price prematurely.",
+      "We will represent you, not the buyer, at every step.",
+      "If we do not believe in your property, we will tell you, and we will recommend a colleague who might."
+    ]
+  }
+}
