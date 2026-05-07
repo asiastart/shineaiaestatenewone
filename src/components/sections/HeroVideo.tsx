@@ -74,7 +74,7 @@ export function HeroVideo() {
           transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="eyebrow mb-8 lg:mb-12"
         >
-          Koh Samui · Paris · Cannes
+          Paris · Cannes · Dubai
         </motion.span>
 
         <h1 className="serif-italic text-[#F8F5F0] leading-[1.05] tracking-tight max-w-5xl">
@@ -107,7 +107,7 @@ export function HeroVideo() {
           transition={{ duration: 0.8, delay: 1.4, ease: [0.16, 1, 0.3, 1] }}
           className="mt-10 lg:mt-12 max-w-xl text-base lg:text-lg text-[#F8F5F0]/80 leading-relaxed font-sans"
         >
-          Properties chosen with care across Koh Samui, Paris, and the French Riviera.
+          Hotels, immeubles, and signature residences across Paris, Cannes, and Dubai.
           A small, considered portfolio — placed quietly into careful hands.
         </motion.p>
 

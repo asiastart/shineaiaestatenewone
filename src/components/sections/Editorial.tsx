@@ -58,10 +58,11 @@ export function Editorial() {
               </p>
               <p>
                 We are a small house. We do not list everything that comes onto the
-                market — not on Koh Samui, not in Paris, not in Cannes. The portfolio
-                you find here has been chosen one address at a time. Sometimes after
-                months of conversation with an owner. Sometimes after standing on a
-                piece of land and waiting to see what it does in the rain.
+                market — not in Paris, not in Cannes, not in Dubai, and not on
+                Koh Samui where it began. Every asset in this book has been chosen
+                one address at a time. Sometimes after months of conversation with
+                an owner. Sometimes after walking the building, floor by floor,
+                in the hour after rain.
               </p>
               <p className="text-[#C9A96E] serif-italic text-xl lg:text-2xl pt-4">
                 We do not sell square metres. We place sanctuaries — quietly, into careful hands.

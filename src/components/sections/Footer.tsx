@@ -14,8 +14,9 @@ export function Footer() {
               The Thailand we keep for ourselves.
             </p>
             <p className="mt-6 text-sm text-[#F8F5F0]/55 max-w-md leading-relaxed">
-              A small, considered portfolio of villas, apartments, and hotels across
-              Koh Samui, Paris, and the French Riviera. Curated since 2013.
+              A small, considered portfolio of hotels, immeubles, and signature
+              residences across Paris, Cannes, and Dubai. Heritage portfolio in
+              Koh Samui. Curated since 2013.
             </p>
           </div>
 

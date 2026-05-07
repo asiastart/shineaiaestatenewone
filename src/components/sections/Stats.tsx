@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import { CounterStat } from './CounterStat';
 
 const STATS = [
-  { value: 671, suffix: '+', label: 'Properties placed' },
-  { value: 12, suffix: '', label: 'Years on the islands' },
-  { value: 3, suffix: '', label: 'Cities. By foot.' },
+  { value: 671, suffix: '+', label: 'Assets placed' },
+  { value: 12, suffix: '', label: 'Years operating' },
+  { value: 3, suffix: '', label: 'Active markets' },
   { value: 4, suffix: '', label: 'Languages spoken' },
 ];
 

@@ -6,40 +6,38 @@ import { motion } from 'framer-motion';
 import propertiesData from '../../../data/properties.json';
 
 type Property = { destination?: string };
-
 const PROPS = propertiesData as Property[];
-
-const COUNT = (dest: string) =>
-  PROPS.filter((p) => p.destination === dest).length;
+const COUNT = (dest: string) => PROPS.filter((p) => p.destination === dest).length;
 
 const DESTINATIONS = [
-  {
-    name: 'Koh Samui',
-    region: 'Thailand',
-    eyebrow: 'Primary market',
-    image: 'https://images.pexels.com/photos/35921780/pexels-photo-35921780.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    href: '/properties?destination=Koh+Samui',
-    description: 'Bophut, Maenam, Lipa Noi, Choeng Mon. Twelve kilometres of coastline we know by name.',
-  },
   {
     name: 'Paris',
     region: 'France',
     eyebrow: 'European desk',
-    image: 'https://images.pexels.com/photos/2412606/pexels-photo-2412606.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    image: 'https://images.pexels.com/photos/161901/paris-sunset-france-monument-161901.jpeg?auto=compress&cs=tinysrgb&w=1600',
     href: '/properties?destination=Paris',
-    description: 'Haussmannian apartments, hôtels particuliers, and a small book of central buildings.',
+    description: 'Hôtels particuliers, full-freehold immeubles, and five-star hotels in the central arrondissements.',
   },
   {
     name: 'Cannes',
     region: 'French Riviera',
     eyebrow: 'Mediterranean',
-    image: 'https://images.pexels.com/photos/2363938/pexels-photo-2363938.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    image: 'https://images.pexels.com/photos/1772973/pexels-photo-1772973.jpeg?auto=compress&cs=tinysrgb&w=1600',
     href: '/properties?destination=Cannes',
-    description: 'La Croisette, Super Cannes, Belle Époque mansions, and four-star hotels.',
+    description: 'La Croisette four- and five-star hotels, Belle Époque mansions, residential buildings.',
+  },
+  {
+    name: 'Dubai',
+    region: 'United Arab Emirates',
+    eyebrow: 'Gulf',
+    image: 'https://images.pexels.com/photos/2044434/pexels-photo-2044434.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    href: '/properties?destination=Dubai',
+    description: 'Five-star resorts, residential towers, sky penthouses across Downtown, Marina, Palm Jumeirah.',
   },
 ];
 
 export function Destinations() {
+  const samuiCount = COUNT('Koh Samui');
   return (
     <section id="destinations" className="py-section">
       <div className="container-luxe">
@@ -52,12 +50,12 @@ export function Destinations() {
         >
           <span className="eyebrow">Where we work</span>
           <h2 className="serif-italic text-3xl lg:text-5xl text-[#F8F5F0] mt-4 leading-tight">
-            Three places. Each known by foot.
+            Three cities. Hotels and immeubles, by hand.
           </h2>
           <p className="mt-6 text-base text-[#F8F5F0]/65 leading-relaxed">
-            Koh Samui is where it began, twelve years ago, and where the portfolio
-            sits deepest. Paris and Cannes followed, when clients asked. We do not
-            list everywhere — only where we have walked the streets ourselves.
+            We focus on income-producing assets and signature freeholds — five-star
+            hotels, full-freehold buildings, and the rare residences worth placing
+            properly. Three desks. One conversation.
           </p>
         </motion.div>
 
@@ -99,7 +97,7 @@ export function Destinations() {
                     <p className="mt-5 text-sm text-[#F8F5F0]/70 leading-relaxed">{d.description}</p>
                     <div className="mt-6 flex items-center gap-3">
                       <span className="text-xs uppercase tracking-[0.16em] text-[#C9A96E]">
-                        {count > 0 ? `${count} ${count === 1 ? 'property' : 'properties'}` : 'On request'}
+                        {count > 0 ? `${count} ${count === 1 ? 'asset' : 'assets'}` : 'On request'}
                       </span>
                       <span className="h-px flex-1 bg-[#C9A96E]/30 group-hover:bg-[#C9A96E] transition-colors duration-500" />
                       <span className="text-xs uppercase tracking-[0.16em] text-[#C9A96E] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -113,15 +111,31 @@ export function Destinations() {
           })}
         </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 text-center text-xs uppercase tracking-[0.18em] text-[#6B5E54]"
-        >
-          Other markets — Phuket, London, Geneva, Marrakech — on private request.
-        </motion.p>
+        {samuiCount > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-16 pt-10 border-t border-[#3A3128] flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+          >
+            <p className="text-sm text-[#F8F5F0]/60 leading-relaxed max-w-xl">
+              <span className="text-[#C9A96E] uppercase tracking-[0.18em] text-xs mr-3">Heritage market</span>
+              <span className="serif-italic text-lg text-[#F8F5F0]">Koh Samui</span> — where the house began in 2013.
+              Private villa portfolio, available on request.
+            </p>
+            <Link
+              href="/properties?destination=Koh+Samui"
+              className="text-xs uppercase tracking-[0.16em] text-[#C9A96E] border-b border-[#C9A96E]/40 hover:border-[#C9A96E] pb-1 transition-colors"
+            >
+              See {samuiCount} Samui properties →
+            </Link>
+          </motion.div>
+        )}
+
+        <p className="mt-12 text-center text-xs uppercase tracking-[0.18em] text-[#6B5E54]">
+          Other markets — London, Geneva, Marrakech, Singapore — on private request.
+        </p>
       </div>
     </section>
   );
