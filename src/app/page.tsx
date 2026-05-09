@@ -73,7 +73,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {blog.map((article) => (
+              {blog.map((article, i) => (
                 <Link
                   key={article.slug}
                   href={`/blog/${article.slug}`}
@@ -84,6 +84,7 @@ export default function HomePage() {
                       src={article.image}
                       alt={article.title}
                       fill
+                      priority={i < 3}
                       sizes="(min-width: 768px) 33vw, 100vw"
                       className="object-cover transition-transform duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
                     />

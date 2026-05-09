@@ -77,6 +77,7 @@ export default function BlogPage() {
                           src={second.image}
                           alt={second.title}
                           fill
+                          priority
                           sizes="(min-width: 1024px) 40vw, 100vw"
                           className="object-cover transition-transform duration-[1500ms] group-hover:scale-[1.04]"
                         />
@@ -114,6 +115,7 @@ export default function BlogPage() {
                           src={article.image}
                           alt={article.title}
                           fill
+                          priority={i === 0}
                           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                           className="object-cover transition-transform duration-[1500ms] group-hover:scale-[1.04]"
                         />
