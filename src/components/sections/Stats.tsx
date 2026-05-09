@@ -6,7 +6,7 @@ import { CounterStat } from './CounterStat';
 const STATS = [
   { value: 671, suffix: '+', label: 'Assets placed' },
   { value: 12, suffix: '', label: 'Years operating' },
-  { value: 3, suffix: '', label: 'Active markets' },
+  { value: 501, suffix: '+', label: 'For-sale listings' },
   { value: 4, suffix: '', label: 'Languages spoken' },
 ];
 
