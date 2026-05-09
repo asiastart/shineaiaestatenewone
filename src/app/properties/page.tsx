@@ -6,7 +6,8 @@ import { Nav } from '@/components/sections/Nav';
 import { Footer } from '@/components/sections/Footer';
 import { WhatsAppButton } from '@/components/sections/WhatsAppButton';
 import { PropertyCard, type Property } from '@/components/sections/PropertyCard';
-import { CURRENCIES, type Currency } from '@/lib/currency';
+import { CURRENCIES } from '@/lib/currency';
+import { useCurrency } from '@/hooks/useCurrency';
 import propertiesData from '../../../data/properties.json';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -30,7 +31,7 @@ function PropertiesContent() {
   const [location, setLocation] = useState<string>('All');
   const [propertyType, setPropertyType] = useState<string>('All');
   const [bracket, setBracket] = useState<number | null>(null);
-  const [currency, setCurrency] = useState<Currency>('THB');
+  const { currency, setCurrency } = useCurrency();
   const [showOffPlan, setShowOffPlan] = useState<'all' | 'for-sale' | 'off-plan'>('all');
 
   const filtered = useMemo(() => {
