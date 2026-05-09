@@ -71,6 +71,13 @@ export function PropertyCard({
               Featured
             </div>
           )}
+          {property.status === 'sold' && (
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
+              <span className="border border-[#F8F5F0]/60 text-[#F8F5F0]/80 text-[10px] uppercase tracking-[0.2em] px-4 py-2">
+                Sold
+              </span>
+            </div>
+          )}
         </div>
 
         <div className="pt-6">
@@ -88,7 +95,7 @@ export function PropertyCard({
           </h3>
 
           <div className="flex items-baseline gap-4 text-sm text-[#F8F5F0]/70">
-            <span>{property.bedrooms} bed</span>
+            <span>{property.bedrooms > 0 ? `${property.bedrooms} bed` : 'On request'}</span>
             {property.bathrooms && <span>· {property.bathrooms} bath</span>}
             {property.size_sqm && <span>· {property.size_sqm} sqm</span>}
           </div>
