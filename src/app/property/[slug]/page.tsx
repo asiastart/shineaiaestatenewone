@@ -37,8 +37,14 @@ export default async function PropertyDetailPage({ params }: { params: Promise<{
   const property = ALL.find((p) => p.slug === slug);
   if (!property) notFound();
 
-  // Build gallery — use property image first, then Pexels fallbacks
-  const gallery = [property.image || FALLBACK_GALLERY[0], ...FALLBACK_GALLERY];
+  // Build gallery — use real property images, fall back to Pexels if not enough
+  const realGallery = [
+    ...(property.image ? [property.image] : []),
+    ...(property.gallery ?? []),
+  ];
+  const gallery = realGallery.length >= 4
+    ? realGallery
+    : [...realGallery, ...FALLBACK_GALLERY].slice(0, Math.max(4, realGallery.length));
 
   // Similar properties — same destination, exclude current, max 3
   const similar = ALL
