@@ -14,12 +14,15 @@ export type Property = {
   location: string;
   destination?: string;
   bedrooms: number;
-  bathrooms?: number;
+  bathrooms?: number | null;
   size_sqm?: number | null;
+  land_sqm?: number | null;
   type: string;
-  status: 'for-sale' | 'off-plan' | string;
+  status: 'for-sale' | 'off-plan' | 'sold';
   image: string | null;
   featured?: boolean;
+  gallery?: string[];
+  features?: string[];
 };
 
 const FALLBACK = 'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=85';
