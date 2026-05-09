@@ -223,7 +223,7 @@ export default function SellYourPropertyPage() {
               {sellContent.testimonials.map((t, i) => (
                 <RevealOnScroll key={i} delay={i * 0.15}>
                   <blockquote className="flex flex-col h-full">
-                    <span className="text-[#C9A96E] serif-italic text-5xl leading-none mb-6">"</span>
+                    <span className="text-[#C9A96E] serif-italic text-5xl leading-none mb-6">&rdquo;</span>
                     <p className="serif-italic text-xl lg:text-2xl text-[#F8F5F0] leading-relaxed flex-1">
                       {t.quote}
                     </p>
