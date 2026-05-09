@@ -3,6 +3,7 @@ import { Nav } from '@/components/sections/Nav';
 import { Footer } from '@/components/sections/Footer';
 import { WhatsAppButton } from '@/components/sections/WhatsAppButton';
 import { RevealOnScroll } from '@/components/sections/RevealOnScroll';
+import { ContactForm } from '@/components/sections/ContactForm';
 
 export const metadata = {
   title: 'Contact — Shine Asia Estate, Koh Samui',
@@ -118,54 +119,7 @@ export default function ContactPage() {
               </RevealOnScroll>
 
               <RevealOnScroll delay={0.15} className="lg:col-span-7">
-                <form className="space-y-7">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <input
-                      type="text"
-                      placeholder="Your name"
-                      className="bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Phone, email, or WhatsApp"
-                      className="bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="text-xs uppercase tracking-[0.18em] text-[#6B5E54] block mb-3">
-                      What are you reaching out about?
-                    </label>
-                    <div className="flex flex-wrap gap-3">
-                      {['Buying', 'Selling', 'Both', 'Just curious'].map((opt) => (
-                        <label key={opt} className="cursor-pointer">
-                          <input type="radio" name="intent" value={opt} className="peer sr-only" defaultChecked={opt === 'Buying'} />
-                          <span className="block px-5 py-3 border border-[#3A3128] text-xs uppercase tracking-[0.16em] text-[#F8F5F0]/70 peer-checked:bg-[#C9A96E] peer-checked:text-[#0A0A0A] peer-checked:border-[#C9A96E] hover:border-[#C9A96E] transition-all">
-                            {opt}
-                          </span>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-
-                  <textarea
-                    rows={6}
-                    placeholder="Tell us a little about what you are looking for — or what you would like to place. We read everything."
-                    className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors resize-none"
-                  />
-
-                  <div className="pt-4 flex items-center gap-6 flex-wrap">
-                    <button
-                      type="submit"
-                      className="border border-[#C9A96E] text-[#C9A96E] hover:bg-[#C9A96E] hover:text-[#0A0A0A] px-8 py-4 text-xs uppercase tracking-[0.16em] transition-all duration-500"
-                    >
-                      Send the note
-                    </button>
-                    <span className="text-xs text-[#6B5E54] uppercase tracking-[0.16em]">
-                      Or reach us directly at the numbers above
-                    </span>
-                  </div>
-                </form>
+                <ContactForm />
               </RevealOnScroll>
             </div>
           </div>
