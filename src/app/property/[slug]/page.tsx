@@ -247,7 +247,7 @@ export default async function PropertyDetailPage({ params }: { params: Promise<{
                       <span>Phone</span>
                       <span>+66 65 831 4819</span>
                     </a>
-                    <a href="https://wa.me/66658314819" className="flex items-center justify-between text-[#F8F5F0]/70 hover:text-[#C9A96E] transition">
+                    <a href={`https://wa.me/66658314819?text=${encodeURIComponent(`I'm interested in: ${property.title}`)}`} className="flex items-center justify-between text-[#F8F5F0]/70 hover:text-[#C9A96E] transition">
                       <span>WhatsApp</span>
                       <span>Open conversation →</span>
                     </a>
