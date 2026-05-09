@@ -41,7 +41,7 @@ export function Nav() {
           <span className="font-sans text-xs uppercase tracking-[0.2em] text-[#C9A96E] mt-1">Asia Estate</span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-10">
+        <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-10">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -66,16 +66,20 @@ export function Nav() {
         </div>
 
         <button
-          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-label={open ? 'Close menu' : 'Toggle menu'}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
           className="lg:hidden text-[#F8F5F0]"
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
         </button>
       </div>
 
       {open && (
         <motion.nav
+          id="mobile-menu"
+          aria-label="Mobile navigation"
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}

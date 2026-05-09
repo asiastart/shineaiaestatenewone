@@ -36,7 +36,7 @@ export default function ContactPage() {
   return (
     <>
       <Nav />
-      <main>
+      <main id="main-content">
         {/* Hero — minimal */}
         <section className="relative pt-40 pb-20 lg:pb-32 bg-black overflow-hidden">
           <Image

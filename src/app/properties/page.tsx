@@ -61,7 +61,7 @@ function PropertiesContent() {
   return (
     <>
       <Nav />
-      <main>
+      <main id="main-content">
         {/* Hero band */}
         <section className="relative h-[60vh] min-h-[420px] overflow-hidden bg-black pt-32 pb-16 flex items-end">
           <Image

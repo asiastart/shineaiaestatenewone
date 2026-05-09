@@ -18,7 +18,7 @@ export default function BlogPage() {
   return (
     <>
       <Nav />
-      <main>
+      <main id="main-content">
         {/* Hero band */}
         <section className="pt-40 pb-20 border-b border-[#3A3128]">
           <div className="container-luxe">

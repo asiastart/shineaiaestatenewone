@@ -49,27 +49,38 @@ export function ViewingForm({ propertyTitle }: { propertyTitle: string }) {
 
   return (
     <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+      <label htmlFor="view-name" className="sr-only">Your name</label>
       <input
+        id="view-name"
         type="text"
         required
         value={name}
         onChange={(e) => setName(e.target.value)}
         placeholder="Your name"
+        maxLength={100}
         className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-3 px-1 text-sm placeholder:text-[#6B5E54] outline-none transition-colors"
       />
+      <label htmlFor="view-contact" className="sr-only">Phone, email, or WhatsApp</label>
       <input
+        id="view-contact"
         type="text"
         required
         value={contact}
         onChange={(e) => setContact(e.target.value)}
         placeholder="Phone, email, or WhatsApp"
+        maxLength={200}
         className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-3 px-1 text-sm placeholder:text-[#6B5E54] outline-none transition-colors"
       />
+      <label htmlFor="view-timing" className="sr-only">
+        When would you like to walk through?
+      </label>
       <textarea
+        id="view-timing"
         rows={3}
         value={timing}
         onChange={(e) => setTiming(e.target.value)}
         placeholder="When would you like to walk through?"
+        maxLength={500}
         className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-3 px-1 text-sm placeholder:text-[#6B5E54] outline-none transition-colors resize-none"
       />
       <button

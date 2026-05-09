@@ -38,7 +38,7 @@ export default function AboutPage() {
   return (
     <>
       <Nav />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className="relative min-h-[80vh] flex items-end pt-32 pb-20 overflow-hidden bg-black">
           <Image

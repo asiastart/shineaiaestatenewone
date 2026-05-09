@@ -8,6 +8,7 @@ import { Footer } from '@/components/sections/Footer';
 import { WhatsAppButton } from '@/components/sections/WhatsAppButton';
 import { PropertyCard, type Property } from '@/components/sections/PropertyCard';
 import propertiesData from '../../data/properties.json';
+import { OrganizationJsonLd } from '@/components/sections/OrganizationJsonLd';
 import blogData from '../../data/blog.json';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -21,8 +22,9 @@ export default function HomePage() {
 
   return (
     <>
+      <OrganizationJsonLd />
       <Nav />
-      <main>
+      <main id="main-content">
         <HeroVideo />
         <Stats />
         <Featured property={featured} />
@@ -84,7 +86,6 @@ export default function HomePage() {
                       src={article.image}
                       alt={article.title}
                       fill
-                      priority={i < 3}
                       sizes="(min-width: 768px) 33vw, 100vw"
                       className="object-cover transition-transform duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
                     />

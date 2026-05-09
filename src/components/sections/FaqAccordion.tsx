@@ -13,18 +13,22 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
     <ul className="border-t border-[#3A3128]">
       {items.map((item, i) => {
         const isOpen = open === i;
+        const buttonId = `faq-btn-${i}`;
+        const panelId = `faq-panel-${i}`;
         return (
           <li key={i} className="border-b border-[#3A3128]">
             <button
               type="button"
+              id={buttonId}
               onClick={() => setOpen(isOpen ? null : i)}
               aria-expanded={isOpen}
+              aria-controls={panelId}
               className="w-full flex items-center justify-between gap-6 py-7 text-left group"
             >
               <span className="serif-italic text-xl lg:text-2xl text-[#F8F5F0] leading-tight group-hover:text-[#C9A96E] transition-colors duration-300">
                 {item.q}
               </span>
-              <span className="shrink-0 text-[#C9A96E]">
+              <span className="shrink-0 text-[#C9A96E]" aria-hidden="true">
                 {isOpen ? <Minus size={20} /> : <Plus size={20} />}
               </span>
             </button>
@@ -32,6 +36,9 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
               {isOpen && (
                 <motion.div
                   key="content"
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={buttonId}
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}

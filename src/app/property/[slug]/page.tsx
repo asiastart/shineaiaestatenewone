@@ -8,6 +8,7 @@ import { PropertyCard, type Property } from '@/components/sections/PropertyCard'
 import { RevealOnScroll } from '@/components/sections/RevealOnScroll';
 import { ViewingForm } from '@/components/sections/ViewingForm';
 import { formatPrice } from '@/lib/currency';
+import { PropertyJsonLd } from '@/components/sections/PropertyJsonLd';
 import propertiesData from '../../../../data/properties.json';
 
 const ALL = propertiesData as Property[];
@@ -54,8 +55,9 @@ export default async function PropertyDetailPage({ params }: { params: Promise<{
 
   return (
     <>
+      <PropertyJsonLd property={property} />
       <Nav />
-      <main>
+      <main id="main-content">
         {/* Hero — full-bleed primary image */}
         <section className="relative h-[88vh] min-h-[600px] overflow-hidden bg-black pt-20">
           <Image
@@ -149,10 +151,10 @@ export default async function PropertyDetailPage({ params }: { params: Promise<{
               </RevealOnScroll>
               <RevealOnScroll delay={0.1} className="lg:col-span-4 grid grid-rows-2 gap-6 lg:gap-8">
                 <div className="relative aspect-square overflow-hidden bg-[#2A2420]">
-                  <Image src={gallery[2]} alt={`${property.title} — view 2`} fill sizes="33vw" className="object-cover" />
+                  <Image src={gallery[2]} alt={`${property.title} — view 2`} fill sizes="(min-width: 1024px) 33vw, 50vw" className="object-cover" />
                 </div>
                 <div className="relative aspect-square overflow-hidden bg-[#2A2420]">
-                  <Image src={gallery[3]} alt={`${property.title} — view 3`} fill sizes="33vw" className="object-cover" />
+                  <Image src={gallery[3]} alt={`${property.title} — view 3`} fill sizes="(min-width: 1024px) 33vw, 50vw" className="object-cover" />
                 </div>
               </RevealOnScroll>
             </div>

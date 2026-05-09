@@ -39,6 +39,7 @@ export function PropertyCard({
   return (
     <Link
       href={`/property/${property.slug}`}
+      aria-label={`${property.title}, ${property.bedrooms > 0 ? `${property.bedrooms} bedrooms, ` : ''}${property.type}, ${property.location}`}
       className="group block"
     >
       <motion.article
@@ -49,17 +50,19 @@ export function PropertyCard({
         <div className="relative aspect-[4/3] overflow-hidden bg-[#2A2420]">
           <Image
             src={property.image || FALLBACK}
-            alt={property.title}
+            alt={`${property.title} — ${property.type} in ${property.location}`}
             fill
             priority={priority}
-            sizes="(min-width: 1280px) 400px, (min-width: 768px) 33vw, 100vw"
+            sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
             className="object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
           />
-          {/* Subtle gold gradient on hover */}
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-               style={{
-                 background: 'linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%)'
-               }}
+          {/* Subtle gold gradient on hover — purely decorative */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            style={{
+              background: 'linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%)'
+            }}
           />
           {property.status === 'off-plan' && (
             <div className="absolute top-4 left-4 bg-[#0A0A0A]/85 backdrop-blur-sm px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] text-[#C9A96E] border border-[#C9A96E]/40">

@@ -37,7 +37,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
   return (
     <>
       <Nav />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className="relative pt-40 pb-20 bg-black overflow-hidden">
           <Image

@@ -19,7 +19,7 @@ export default function SellYourPropertyPage() {
   return (
     <>
       <Nav />
-      <main>
+      <main id="main-content">
         {/* HERO */}
         <section className="relative min-h-[88vh] flex items-end overflow-hidden bg-black pt-32 pb-20">
           <Image

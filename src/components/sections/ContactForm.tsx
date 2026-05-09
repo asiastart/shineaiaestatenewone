@@ -53,28 +53,38 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-7">
       <div className="grid md:grid-cols-2 gap-6">
-        <input
-          type="text"
-          required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Your name"
-          className="bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors"
-        />
-        <input
-          type="text"
-          required
-          value={contact}
-          onChange={(e) => setContact(e.target.value)}
-          placeholder="Phone, email, or WhatsApp"
-          className="bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors"
-        />
+        <div>
+          <label htmlFor="contact-name" className="sr-only">Your name</label>
+          <input
+            id="contact-name"
+            type="text"
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Your name"
+            maxLength={100}
+            className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors"
+          />
+        </div>
+        <div>
+          <label htmlFor="contact-reach" className="sr-only">Phone, email, or WhatsApp</label>
+          <input
+            id="contact-reach"
+            type="text"
+            required
+            value={contact}
+            onChange={(e) => setContact(e.target.value)}
+            placeholder="Phone, email, or WhatsApp"
+            maxLength={200}
+            className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors"
+          />
+        </div>
       </div>
 
-      <div>
-        <label className="text-xs uppercase tracking-[0.18em] text-[#6B5E54] block mb-3">
+      <fieldset>
+        <legend className="text-xs uppercase tracking-[0.18em] text-[#6B5E54] block mb-3">
           What are you reaching out about?
-        </label>
+        </legend>
         <div className="flex flex-wrap gap-3">
           {['Buying', 'Selling', 'Both', 'Just curious'].map((opt) => (
             <label key={opt} className="cursor-pointer">
@@ -92,13 +102,18 @@ export function ContactForm() {
             </label>
           ))}
         </div>
-      </div>
+      </fieldset>
 
+      <label htmlFor="contact-message" className="sr-only">
+        Tell us about what you are looking for or would like to place
+      </label>
       <textarea
+        id="contact-message"
         rows={6}
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Tell us a little about what you are looking for — or what you would like to place. We read everything."
+        maxLength={2000}
         className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors resize-none"
       />
 

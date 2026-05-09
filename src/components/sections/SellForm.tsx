@@ -54,35 +54,57 @@ export function SellForm() {
   return (
     <form onSubmit={handleSubmit} className="mt-16 max-w-2xl mx-auto space-y-6">
       <div className="grid md:grid-cols-2 gap-6">
-        <input
-          type="text"
-          required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Your name"
-          className="bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors"
-        />
-        <input
-          type="text"
-          required
-          value={contact}
-          onChange={(e) => setContact(e.target.value)}
-          placeholder="Where to reach you (phone, email, WhatsApp)"
-          className="bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors"
-        />
+        <div>
+          <label htmlFor="sell-name" className="sr-only">Your name</label>
+          <input
+            id="sell-name"
+            type="text"
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Your name"
+            maxLength={100}
+            className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors"
+          />
+        </div>
+        <div>
+          <label htmlFor="sell-contact" className="sr-only">
+            Where to reach you (phone, email, WhatsApp)
+          </label>
+          <input
+            id="sell-contact"
+            type="text"
+            required
+            value={contact}
+            onChange={(e) => setContact(e.target.value)}
+            placeholder="Where to reach you (phone, email, WhatsApp)"
+            maxLength={200}
+            className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors"
+          />
+        </div>
       </div>
+      <label htmlFor="sell-location" className="sr-only">
+        Where is the property? (Bo Put, Maenam, Lipa Noi…)
+      </label>
       <input
+        id="sell-location"
         type="text"
         value={location}
         onChange={(e) => setLocation(e.target.value)}
         placeholder="Where is the property? (Bo Put, Maenam, Lipa Noi…)"
+        maxLength={200}
         className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors"
       />
+      <label htmlFor="sell-details" className="sr-only">
+        Tell us about your property — bedrooms, year, anything we should know
+      </label>
       <textarea
+        id="sell-details"
         rows={4}
         value={details}
         onChange={(e) => setDetails(e.target.value)}
         placeholder="A few words about your property — bedrooms, year, anything we should know."
+        maxLength={1000}
         className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors resize-none"
       />
       <div className="pt-6 flex flex-col sm:flex-row items-center gap-6">
