@@ -205,7 +205,7 @@ export default function AboutPage() {
               <div className="mt-10 flex items-center justify-center gap-6 flex-wrap">
                 <a
                   href="/contact"
-                  className="border border-[#C9A96E] text-[#C9A96E] px-8 py-4 text-xs uppercase tracking-[0.16em] hover:bg-[#C9A96E] hover:text-[#0A0A0A] transition-all duration-500"
+                  className="border border-[#C9A96E] text-[#C9A96E] px-8 py-4 text-xs uppercase tracking-[0.16em] hover:bg-[#C9A96E] hover:text-[#0A0A0A] transition-all duration-500 rounded-full"
                 >
                   Open conversation
                 </a>

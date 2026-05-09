@@ -116,7 +116,7 @@ function PropertiesContent() {
               <select
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
-                className="bg-transparent border border-[#3A3128] text-[#F8F5F0] text-xs uppercase tracking-[0.16em] px-4 py-3 outline-none focus:border-[#C9A96E] cursor-pointer"
+                className="bg-transparent border border-[#3A3128] text-[#F8F5F0] text-xs uppercase tracking-[0.16em] px-4 py-3 outline-none focus:border-[#C9A96E] cursor-pointer rounded-full"
               >
                 <option value="All">All locations</option>
                 {LOCATIONS.map((l) => (
@@ -128,7 +128,7 @@ function PropertiesContent() {
               <select
                 value={propertyType}
                 onChange={(e) => setPropertyType(e.target.value)}
-                className="bg-transparent border border-[#3A3128] text-[#F8F5F0] text-xs uppercase tracking-[0.16em] px-4 py-3 outline-none focus:border-[#C9A96E] cursor-pointer"
+                className="bg-transparent border border-[#3A3128] text-[#F8F5F0] text-xs uppercase tracking-[0.16em] px-4 py-3 outline-none focus:border-[#C9A96E] cursor-pointer rounded-full"
               >
                 <option value="All">All types</option>
                 {TYPES.map((t) => (
@@ -137,7 +137,7 @@ function PropertiesContent() {
               </select>
 
               {/* Status segmented */}
-              <div className="flex border border-[#3A3128]">
+              <div className="flex border border-[#3A3128] rounded-full overflow-hidden">
                 {(['all', 'for-sale', 'off-plan'] as const).map((s) => (
                   <button
                     key={s}
@@ -155,7 +155,7 @@ function PropertiesContent() {
               </div>
 
               {/* Price brackets */}
-              <div className="flex border border-[#3A3128]">
+              <div className="flex border border-[#3A3128] rounded-full overflow-hidden">
                 {PRICE_BRACKETS.map((b, i) => (
                   <button
                     key={b.label}
@@ -176,7 +176,7 @@ function PropertiesContent() {
                 <button
                   type="button"
                   onClick={() => setDestination('')}
-                  className="flex items-center gap-2 border border-[#C9A96E] px-4 py-3 text-xs uppercase tracking-[0.16em] text-[#C9A96E]"
+                  className="flex items-center gap-2 border border-[#C9A96E] px-4 py-3 text-xs uppercase tracking-[0.16em] text-[#C9A96E] rounded-full"
                 >
                   {destination} <span className="opacity-60">×</span>
                 </button>
@@ -184,7 +184,7 @@ function PropertiesContent() {
 
               <div className="ml-auto flex items-center gap-4">
                 {/* Currency */}
-                <div className="flex border border-[#3A3128]">
+                <div className="flex border border-[#3A3128] rounded-full overflow-hidden">
                   {CURRENCIES.map((c) => (
                     <button
                       key={c}

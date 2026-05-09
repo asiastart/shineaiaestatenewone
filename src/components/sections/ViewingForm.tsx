@@ -85,7 +85,7 @@ export function ViewingForm({ propertyTitle }: { propertyTitle: string }) {
       />
       <button
         type="submit"
-        className="w-full mt-4 border border-[#C9A96E] text-[#C9A96E] hover:bg-[#C9A96E] hover:text-[#0A0A0A] px-6 py-3 text-xs uppercase tracking-[0.16em] transition-all duration-500"
+        className="w-full mt-4 border border-[#C9A96E] text-[#C9A96E] hover:bg-[#C9A96E] hover:text-[#0A0A0A] px-6 py-3 text-xs uppercase tracking-[0.16em] transition-all duration-500 rounded-full"
       >
         Arrange a viewing
       </button>

@@ -96,7 +96,7 @@ export function ContactForm() {
                 onChange={() => setIntent(opt)}
                 className="peer sr-only"
               />
-              <span className="block px-5 py-3 border border-[#3A3128] text-xs uppercase tracking-[0.16em] text-[#F8F5F0]/70 peer-checked:bg-[#C9A96E] peer-checked:text-[#0A0A0A] peer-checked:border-[#C9A96E] hover:border-[#C9A96E] transition-all">
+              <span className="block px-5 py-3 border border-[#3A3128] text-xs uppercase tracking-[0.16em] text-[#F8F5F0]/70 peer-checked:bg-[#C9A96E] peer-checked:text-[#0A0A0A] peer-checked:border-[#C9A96E] hover:border-[#C9A96E] transition-all rounded-full">
                 {opt}
               </span>
             </label>
@@ -120,7 +120,7 @@ export function ContactForm() {
       <div className="pt-4 flex items-center gap-6 flex-wrap">
         <button
           type="submit"
-          className="border border-[#C9A96E] text-[#C9A96E] hover:bg-[#C9A96E] hover:text-[#0A0A0A] px-8 py-4 text-xs uppercase tracking-[0.16em] transition-all duration-500"
+          className="border border-[#C9A96E] text-[#C9A96E] hover:bg-[#C9A96E] hover:text-[#0A0A0A] px-8 py-4 text-xs uppercase tracking-[0.16em] transition-all duration-500 rounded-full"
         >
           Send the note
         </button>

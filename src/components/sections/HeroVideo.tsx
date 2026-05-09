@@ -132,7 +132,7 @@ export function HeroVideo() {
         >
           <a
             href="#properties"
-            className="group inline-flex items-center gap-3 border border-[#C9A96E] px-8 py-4 text-xs uppercase tracking-[0.16em] text-[#C9A96E] hover:bg-[#C9A96E] hover:text-[#0A0A0A] transition-all duration-500"
+            className="group inline-flex items-center gap-3 border border-[#C9A96E] px-8 py-4 text-xs uppercase tracking-[0.16em] text-[#C9A96E] hover:bg-[#C9A96E] hover:text-[#0A0A0A] transition-all duration-500 rounded-full"
           >
             Walk the portfolio
             <span className="inline-block w-6 h-px bg-current group-hover:w-10 transition-all duration-500" />

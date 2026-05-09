@@ -120,7 +120,7 @@ export default function HomePage() {
               <div className="mt-12 flex items-center justify-center gap-4 flex-wrap">
                 <Link
                   href="/contact"
-                  className="border border-[#C9A96E] text-[#C9A96E] px-8 py-4 text-xs uppercase tracking-[0.16em] hover:bg-[#C9A96E] hover:text-[#0A0A0A] transition-all duration-500"
+                  className="border border-[#C9A96E] text-[#C9A96E] px-8 py-4 text-xs uppercase tracking-[0.16em] hover:bg-[#C9A96E] hover:text-[#0A0A0A] transition-all duration-500 rounded-full"
                 >
                   Open conversation
                 </Link>
