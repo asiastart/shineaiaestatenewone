@@ -1,6 +1,7 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { Suspense, useMemo, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Nav } from '@/components/sections/Nav';
 import { Footer } from '@/components/sections/Footer';
 import { WhatsAppButton } from '@/components/sections/WhatsAppButton';
@@ -21,7 +22,11 @@ const PRICE_BRACKETS = [
   { label: '฿50M+', min: 50_000_000 },
 ] as const;
 
-export default function PropertiesPage() {
+function PropertiesContent() {
+  const searchParams = useSearchParams();
+  const initialDestination = searchParams.get('destination') ?? '';
+
+  const [destination, setDestination] = useState<string>(initialDestination);
   const [location, setLocation] = useState<string>('All');
   const [propertyType, setPropertyType] = useState<string>('All');
   const [bracket, setBracket] = useState<number | null>(null);
@@ -30,6 +35,7 @@ export default function PropertiesPage() {
 
   const filtered = useMemo(() => {
     return ALL.filter((p) => {
+      if (destination && p.destination !== destination) return false;
       if (location !== 'All' && p.location !== location) return false;
       if (propertyType !== 'All' && p.type !== propertyType) return false;
       if (showOffPlan !== 'all' && p.status !== showOffPlan) return false;
@@ -41,9 +47,10 @@ export default function PropertiesPage() {
       }
       return true;
     });
-  }, [location, propertyType, bracket, showOffPlan]);
+  }, [destination, location, propertyType, bracket, showOffPlan]);
 
   const reset = () => {
+    setDestination('');
     setLocation('All');
     setPropertyType('All');
     setBracket(null);
@@ -164,6 +171,16 @@ export default function PropertiesPage() {
                 ))}
               </div>
 
+              {destination && (
+                <button
+                  type="button"
+                  onClick={() => setDestination('')}
+                  className="flex items-center gap-2 border border-[#C9A96E] px-4 py-3 text-xs uppercase tracking-[0.16em] text-[#C9A96E]"
+                >
+                  {destination} <span className="opacity-60">×</span>
+                </button>
+              )}
+
               <div className="ml-auto flex items-center gap-4">
                 {/* Currency */}
                 <div className="flex border border-[#3A3128]">
@@ -183,7 +200,7 @@ export default function PropertiesPage() {
                   ))}
                 </div>
 
-                {(location !== 'All' || propertyType !== 'All' || bracket !== null || showOffPlan !== 'all') && (
+                {(destination || location !== 'All' || propertyType !== 'All' || bracket !== null || showOffPlan !== 'all') && (
                   <button
                     type="button"
                     onClick={reset}
@@ -230,5 +247,13 @@ export default function PropertiesPage() {
       <Footer />
       <WhatsAppButton />
     </>
+  );
+}
+
+export default function PropertiesPage() {
+  return (
+    <Suspense>
+      <PropertiesContent />
+    </Suspense>
   );
 }
