@@ -6,6 +6,7 @@ import { Footer } from '@/components/sections/Footer';
 import { WhatsAppButton } from '@/components/sections/WhatsAppButton';
 import { PropertyCard, type Property } from '@/components/sections/PropertyCard';
 import { RevealOnScroll } from '@/components/sections/RevealOnScroll';
+import { ViewingForm } from '@/components/sections/ViewingForm';
 import { formatPrice } from '@/lib/currency';
 import propertiesData from '../../../../data/properties.json';
 
@@ -218,29 +219,7 @@ export default async function PropertyDetailPage({ params }: { params: Promise<{
                     Often at golden hour.
                   </p>
 
-                  <form className="mt-8 space-y-5">
-                    <input
-                      type="text"
-                      placeholder="Your name"
-                      className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-3 px-1 text-sm placeholder:text-[#6B5E54] outline-none transition-colors"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Phone, email, or WhatsApp"
-                      className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-3 px-1 text-sm placeholder:text-[#6B5E54] outline-none transition-colors"
-                    />
-                    <textarea
-                      rows={3}
-                      placeholder="When would you like to walk through?"
-                      className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-3 px-1 text-sm placeholder:text-[#6B5E54] outline-none transition-colors resize-none"
-                    />
-                    <button
-                      type="submit"
-                      className="w-full mt-4 border border-[#C9A96E] text-[#C9A96E] hover:bg-[#C9A96E] hover:text-[#0A0A0A] px-6 py-3 text-xs uppercase tracking-[0.16em] transition-all duration-500"
-                    >
-                      Arrange a viewing
-                    </button>
-                  </form>
+                  <ViewingForm propertyTitle={property.title} />
 
                   <div className="mt-8 pt-6 border-t border-[#3A3128] space-y-3 text-sm">
                     <a href="tel:+66658314819" className="flex items-center justify-between text-[#F8F5F0]/70 hover:text-[#C9A96E] transition">

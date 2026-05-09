@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Nav } from '@/components/sections/Nav';
 import { Footer } from '@/components/sections/Footer';
 import { WhatsAppButton } from '@/components/sections/WhatsAppButton';
+import { SellForm } from '@/components/sections/SellForm';
 import { CounterStat } from '@/components/sections/CounterStat';
 import { FaqAccordion } from '@/components/sections/FaqAccordion';
 import { RevealOnScroll } from '@/components/sections/RevealOnScroll';
@@ -281,41 +282,7 @@ export default function SellYourPropertyPage() {
               </p>
             </div>
 
-            <form className="mt-16 max-w-2xl mx-auto space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <input
-                  type="text"
-                  placeholder="Your name"
-                  className="bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors"
-                />
-                <input
-                  type="text"
-                  placeholder="Where to reach you (phone, email, WhatsApp)"
-                  className="bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors"
-                />
-              </div>
-              <input
-                type="text"
-                placeholder="Where is the property? (Bo Put, Maenam, Lipa Noi…)"
-                className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors"
-              />
-              <textarea
-                rows={4}
-                placeholder="A few words about your property — bedrooms, year, anything we should know."
-                className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-4 px-1 placeholder:text-[#6B5E54] outline-none transition-colors resize-none"
-              />
-              <div className="pt-6 flex flex-col sm:flex-row items-center gap-6">
-                <button
-                  type="submit"
-                  className="border border-[#C9A96E] text-[#C9A96E] hover:bg-[#C9A96E] hover:text-[#0A0A0A] px-8 py-4 text-xs uppercase tracking-[0.16em] transition-all duration-500"
-                >
-                  Send the note
-                </button>
-                <span className="text-xs text-[#6B5E54]">
-                  Or call directly: <a href="tel:+66658314819" className="text-[#F8F5F0] hover:text-[#C9A96E]">+66 65 831 4819</a>
-                </span>
-              </div>
-            </form>
+            <SellForm />
           </div>
         </section>
       </main>

@@ -1,0 +1,83 @@
+'use client';
+
+import { useState, FormEvent } from 'react';
+
+const WA_NUMBER = '66658314819';
+
+export function ViewingForm({ propertyTitle }: { propertyTitle: string }) {
+  const [name, setName] = useState('');
+  const [contact, setContact] = useState('');
+  const [timing, setTiming] = useState('');
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    const text = [
+      `I'd like to arrange a viewing for: ${propertyTitle}`,
+      `Name: ${name}`,
+      `Contact: ${contact}`,
+      timing ? `Preferred time: ${timing}` : '',
+    ]
+      .filter(Boolean)
+      .join('\n');
+
+    window.open(
+      `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`,
+      '_blank',
+      'noopener,noreferrer'
+    );
+    setSent(true);
+  };
+
+  if (sent) {
+    return (
+      <div className="mt-8 py-8 text-center space-y-4">
+        <p className="serif-italic text-xl text-[#F8F5F0]">WhatsApp is opening.</p>
+        <p className="text-xs text-[#F8F5F0]/55 leading-relaxed">
+          Your viewing request is pre-filled. Mr. Zakaria will confirm within a few hours.
+        </p>
+        <button
+          type="button"
+          onClick={() => setSent(false)}
+          className="text-xs uppercase tracking-[0.16em] text-[#6B5E54] hover:text-[#C9A96E] border-b border-[#6B5E54] hover:border-[#C9A96E] pb-1 transition-colors"
+        >
+          Start again
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+      <input
+        type="text"
+        required
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        placeholder="Your name"
+        className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-3 px-1 text-sm placeholder:text-[#6B5E54] outline-none transition-colors"
+      />
+      <input
+        type="text"
+        required
+        value={contact}
+        onChange={(e) => setContact(e.target.value)}
+        placeholder="Phone, email, or WhatsApp"
+        className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-3 px-1 text-sm placeholder:text-[#6B5E54] outline-none transition-colors"
+      />
+      <textarea
+        rows={3}
+        value={timing}
+        onChange={(e) => setTiming(e.target.value)}
+        placeholder="When would you like to walk through?"
+        className="w-full bg-transparent border-b border-[#3A3128] focus:border-[#C9A96E] text-[#F8F5F0] py-3 px-1 text-sm placeholder:text-[#6B5E54] outline-none transition-colors resize-none"
+      />
+      <button
+        type="submit"
+        className="w-full mt-4 border border-[#C9A96E] text-[#C9A96E] hover:bg-[#C9A96E] hover:text-[#0A0A0A] px-6 py-3 text-xs uppercase tracking-[0.16em] transition-all duration-500"
+      >
+        Arrange a viewing
+      </button>
+    </form>
+  );
+}
