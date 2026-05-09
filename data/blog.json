@@ -1,8 +1,110 @@
 [
-  {"slug":"discover-how-psgs-expansion-into-thailand-impacts-real-estate","title":"How PSG's Expansion into Thailand Impacts Real Estate","date":"2025-02-13","category":"Market","excerpt":"The Paris Saint-Germain's recent expansion into Thailand promises to transform local real estate.","image":"https://images.unsplash.com/photo-1598935898639-81586f7d2129?w=1200&q=85","reading_time":4},
-  {"slug":"discover-long-term-villa-rentals-near-greenacre-school-koh-samui","title":"Long-Term Villa Rentals Near Greenacre School","date":"2025-02-13","category":"Living","excerpt":"Looking for a family-friendly villa rental near an excellent international school on the paradise island of Koh Samui.","image":"https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=85","reading_time":3},
-  {"slug":"thailand-extends-visa-free-stay","title":"Thailand Extends Visa-Free Stay to 60 Days","date":"2025-02-13","category":"Practical","excerpt":"Starting July 15, 2024, Thailand extends its visa-free stay to 60 days for travelers.","image":"https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&q=85","reading_time":3},
-  {"slug":"discover-the-vibrant-night-market-in-lamai-koh-samui","title":"The Vibrant Night Market in Lamai","date":"2025-02-13","category":"Lifestyle","excerpt":"Experience the lively atmosphere of Lamai's night market in Koh Samui — a hotspot for tourists and locals.","image":"https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85","reading_time":4},
-  {"slug":"experience-the-vibrant-chinese-new-year-2025-in-koh-samui","title":"Chinese New Year 2025 in Koh Samui","date":"2025-02-13","category":"Culture","excerpt":"Immerse yourself in the vibrant festivities of Chinese New Year 2025 in Koh Samui, Thailand.","image":"https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&q=85","reading_time":4},
-  {"slug":"exploring-thai-spirit-houses","title":"Exploring Thai Spirit Houses: Tradition and Protection","date":"2025-02-13","category":"Culture","excerpt":"Discover the fascinating cultural blend of Buddhism and animism in Thailand through the tradition of spirit houses.","image":"https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&q=85","reading_time":5}
+  {
+    "slug": "discover-how-psgs-expansion-into-thailand-impacts-real-estate",
+    "title": "How PSG's Expansion into Thailand Affects the Property Market",
+    "date": "2025-02-13",
+    "category": "Market",
+    "excerpt": "Paris Saint-Germain's training centres in Thailand are beginning to draw European capital into the island's residential market.",
+    "image": "https://shineasiaestate.co/wp-content/uploads/psgexpansionimpactsonrealestate.jpeg",
+    "reading_time": 4
+  },
+  {
+    "slug": "discover-long-term-villa-rentals-near-greenacre-school-koh-samui",
+    "title": "Long-Term Villa Rentals Near Greenacre School",
+    "date": "2025-02-13",
+    "category": "Living",
+    "excerpt": "Families relocating to Koh Samui can find modern, pool villas within minutes of the island's leading international school.",
+    "image": "https://shineasiaestate.co/wp-content/uploads/longtermvillasrentalkohsamui.jpeg",
+    "reading_time": 3
+  },
+  {
+    "slug": "thailand-extends-visa-free-stay-what-travelers-need-to-know",
+    "title": "Thailand Extends Visa-Free Stay to 60 Days",
+    "date": "2025-02-13",
+    "category": "Practical",
+    "excerpt": "From 15 July 2024, citizens of 93 countries may enter Thailand without a visa for up to 60 days — a meaningful change for second-home buyers.",
+    "image": "https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "reading_time": 3
+  },
+  {
+    "slug": "discover-authentic-thai-flavors-hua-thanons-hidden-gem",
+    "title": "Hua Thanon's Market: Authentic Thai Food, Quietly",
+    "date": "2025-02-13",
+    "category": "Island",
+    "excerpt": "Away from the tourist strip, the morning market at Hua Thanon offers some of the most considered southern Thai cooking on the island.",
+    "image": "https://shineasiaestate.co/wp-content/uploads/AuthenticThaiFlavors.jpeg",
+    "reading_time": 3
+  },
+  {
+    "slug": "discover-the-vibrant-night-market-in-lamai-koh-samui",
+    "title": "The Sunday Night Market in Lamai",
+    "date": "2025-02-13",
+    "category": "Island",
+    "excerpt": "Every Sunday from 16h30, Beach Road in Lamai transforms into a pedestrian market. A good place to be when the heat lifts.",
+    "image": "https://images.pexels.com/photos/1449824/pexels-photo-1449824.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "reading_time": 4
+  },
+  {
+    "slug": "experience-the-vibrant-chinese-new-year-2025-in-koh-samui",
+    "title": "Lunar New Year 2025 on Koh Samui",
+    "date": "2025-02-13",
+    "category": "Culture",
+    "excerpt": "Each January, Koh Samui's Chinese community marks the new year with processions, offerings, and markets that have run for generations.",
+    "image": "https://images.pexels.com/photos/3881578/pexels-photo-3881578.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "reading_time": 4
+  },
+  {
+    "slug": "exploring-thai-spirit-houses-a-blend-of-tradition-and-protection",
+    "title": "Thai Spirit Houses: Architecture of Belief",
+    "date": "2025-02-13",
+    "category": "Culture",
+    "excerpt": "The small shrines at the entrance of every Thai building are not decorative. Understanding them is part of understanding the island.",
+    "image": "https://images.pexels.com/photos/3538581/pexels-photo-3538581.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "reading_time": 5
+  },
+  {
+    "slug": "celebrate-christmas-in-koh-samui-an-unforgettable-guide",
+    "title": "Christmas in Koh Samui: What to Expect",
+    "date": "2025-02-13",
+    "category": "Island",
+    "excerpt": "Warm evenings, open-air dinners, and a Thai interpretation of the season. December on the island has its own character.",
+    "image": "https://images.pexels.com/photos/3182765/pexels-photo-3182765.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "reading_time": 4
+  },
+  {
+    "slug": "experience-paradise-discover-red-elephant-beach-club-in-koh-samui",
+    "title": "Red Elephant Beach Club, Lamai",
+    "date": "2025-02-13",
+    "category": "Island",
+    "excerpt": "On a private stretch of Lamai Beach, Red Elephant offers a quieter version of the island's beach club experience.",
+    "image": "https://images.pexels.com/photos/1450363/pexels-photo-1450363.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "reading_time": 3
+  },
+  {
+    "slug": "discover-thailands-vegetarian-festival-a-culinary-and-cultural-delight",
+    "title": "Thailand's Vegetarian Festival: Nine Days of Restraint",
+    "date": "2025-02-13",
+    "category": "Culture",
+    "excerpt": "The annual Taoist vegetarian festival transforms Thai towns each October. On Koh Samui, it is observed quietly and sincerely.",
+    "image": "https://images.pexels.com/photos/1640775/pexels-photo-1640775.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "reading_time": 5
+  },
+  {
+    "slug": "experience-koh-phangans-full-moon-party-in-2025-essential-dates-travel-tips",
+    "title": "Koh Phangan's Full Moon Party: Dates and Practicalities",
+    "date": "2025-02-13",
+    "category": "Practical",
+    "excerpt": "The monthly gathering at Haad Rin draws tens of thousands. If you plan to attend from Koh Samui, here is what matters.",
+    "image": "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "reading_time": 4
+  },
+  {
+    "slug": "private-transport-to-full-moon-party-stress-free-journey",
+    "title": "Getting to Koh Phangan: Private Transport from Koh Samui",
+    "date": "2025-02-13",
+    "category": "Practical",
+    "excerpt": "The ferry crossing is straightforward. Private speedboat charters offer a quieter alternative for groups.",
+    "image": "https://images.pexels.com/photos/163236/luxury-yacht-boat-speed-water-163236.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "reading_time": 3
+  }
 ]
