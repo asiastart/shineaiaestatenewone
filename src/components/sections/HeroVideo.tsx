@@ -1,7 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Play, Pause } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const TITLE_LINES = [
@@ -18,6 +19,7 @@ const wordVariants = {
 export function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoReady, setVideoReady] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   useEffect(() => {
     const v = videoRef.current;
@@ -27,8 +29,31 @@ export function HeroVideo() {
     return () => v.removeEventListener('canplay', onCanPlay);
   }, []);
 
+  const togglePlayPause = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <section className="relative h-[100svh] min-h-[640px] overflow-hidden bg-black">
+      {/* Poster image — discoverable by preload scanner */}
+      {!videoReady && (
+        <Image
+          src="https://images.pexels.com/photos/35921780/pexels-photo-35921780.jpeg?auto=compress&cs=tinysrgb&w=2400"
+          alt="Koh Samui aerial sunset"
+          fill
+          priority
+          sizes="100vw"
+          className="absolute inset-0 object-cover"
+        />
+      )}
+
       {/* Video background — Pexels free 4K Koh Samui aerial */}
       <video
         ref={videoRef}
@@ -36,8 +61,7 @@ export function HeroVideo() {
         muted
         loop
         playsInline
-        preload="auto"
-        poster="https://images.pexels.com/photos/35921780/pexels-photo-35921780.jpeg?auto=compress&cs=tinysrgb&w=2400"
+        preload="none"
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ${videoReady ? 'opacity-100' : 'opacity-0'}`}
       >
         <source
@@ -45,17 +69,6 @@ export function HeroVideo() {
           type="video/mp4"
         />
       </video>
-
-      {/* Fallback poster always visible (in case video fails) */}
-      {!videoReady && (
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              'url(https://images.pexels.com/photos/35921780/pexels-photo-35921780.jpeg?auto=compress&cs=tinysrgb&w=2400)',
-          }}
-        />
-      )}
 
       {/* Cinematic overlay */}
       <div
@@ -131,6 +144,17 @@ export function HeroVideo() {
             Selling? Begin a private valuation →
           </a>
         </motion.div>
+      </div>
+
+      {/* Video Controls */}
+      <div className="absolute top-8 right-8 z-20 flex gap-4">
+        <button
+          onClick={togglePlayPause}
+          aria-label={isPlaying ? 'Pause video' : 'Play video'}
+          className="p-3 rounded-full border border-[#F8F5F0]/30 hover:border-[#C9A96E] text-[#F8F5F0]/60 hover:text-[#C9A96E] transition-colors duration-300"
+        >
+          {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+        </button>
       </div>
 
       <motion.div
